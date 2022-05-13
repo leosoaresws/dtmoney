@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+interface ContainerProps {
+  isPositive: boolean;
+}
+
 export const Container = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -26,8 +30,13 @@ export const Container = styled.div`
       line-height: 3rem;
     }
 
-    &.highlight-background {
+    &.green-background {
       background: var(--green);
+      color: #fff;
+    }
+
+    &.red-background {
+      background: var(--red);
       color: #fff;
     }
   }
